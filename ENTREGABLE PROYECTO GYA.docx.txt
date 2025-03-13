@@ -1,0 +1,93 @@
+﻿Logo - UAO Portal 
+
+FICHA DE PROYECTO GYA
+Nombres: 
+Diana Lizeth Pinto Giron
+Brayan Steven Gutierrez Villamizar
+Emmanuel Alejandro Quiceno Rodriguez
+Miguel Angel Ramos Galeano 
+
+
+1. Contexto del Proyecto
+1.1 Equipo: 2
+1.2 Nombre del proyecto: Optimización de la captura y visualización de datos del  funcionamiento que usa el esquema del tren de evaporación en una empresa del sector azucarero.
+1.3 Contexto:  
+¿Cómo es el proceso de elaboración de azúcar?
+El proceso de elaboración inicia desde la salida de jugo crudo en molino, el jugo entra al proceso de elaboración por medio de una serie de calentamientos que lo llevan hasta 60 °C luego se alcalizar llevando su ph a 7 y se vuelve a calentar el jugo hasta 102 °C; luego se realiza el proceso de clarificación de jugo que consiste en remover el material insoluble presente en el jugo, del este equipo sale un jugo llamado claro (debido a que se ve limpio) y es llevado a la etapa de evaporación donde el principal trabajo es evaporar el agua del jugo haciendo así que se incremente la concentración de sacarosa lo anterior se mide por medio de grados Brix el cual pasa normalmente de 13 °Brix a 65 °Brix ; el material que sale de aquí es llamado meladura y luego ingresa la proceso de cristalización donde por medio de una semilla se pone en contacto con la meladura y por medio de un proceso de difusión el cristal crece hasta el tamaño comercial (700 Micras) de la cristalizacion se obtiene algo llamado mas que son cristales de azucar en suspension liquida y esto es llevado al area de centrifugacion donde se realiza la separacion de estos granos y salen dos productos miel y azucar humeda ; el azucar humedo es llevaod al secado en dodne el azucar s epone en contacto con el aire caliente y se le quita la ultima parte del agua y la miel es usada para hacer una masa de azucar fina que al pasar por centrifugas se vuelve la semilla que alimenta al tacho y el excedente va a destileria (ver grafica 1).
+
+
+  
+
+
+
+Una empresa del sector azucarero a la hora de realizar estos procesos se obtienen datos a partir de diferentes plataformas, unos datos se obtienen en tiempo real (PCS7 / vista planta) y otros reposan en base de datos que se almacenan (Sigind)  en frecuencia de horas en algunos casos es por hora, cada 2 horas, cada 4 o cada 8 hr, estos datos sirven como soporte para tomar las decisiones del día a día; para este caso en específico nos interesa reducir los tiempos de captura de los datos que apuntan a los indicadores de proceso específicamente consumo de vapor esto busca mejorar el proceso y la eficiencia general del tren de evaporación en cuanto concentración.
+
+
+2. Problema a resolver
+2.1 Situación problema actual: 
+* Reducir los tiempos de captura de datos que  permiten calcular los  indicadores críticos de operación en tiempo inferior al día de procesamiento. 
+
+
+2.2 Limitaciones y retos: 
+Limitación:
+* Conseguir los permisos para extraer los datos de manera periódica debido a que parte de esta información está en servidores fuera del alcance normal de los programas.
+* Revisar la interacción de las variables atemporales  entre sí, para el cálculo de los indicadores de interés (ejemplo eficiencia del tren de evaporación)
+Reto:
+* Encontrar la forma de obtener los datos y poder al menos por hora saber la evolución de los datos del día operativo.
+* Diseñar una interfaz que presente los datos más relevantes de una manera atractiva.
+
+
+2.3 Necesidades y oportunidades:
+Necesidades:
+* Actualización de información de manera periódica: Mejorar el tiempo de obtención de datos dentro de la planta
+* Automatización de reportes: Generar los reportes de forma automática en base a los resultados obtenidos con la extracción de datos
+* Consolidación de datos: Generar informes detallados a partir de los datos recolectados.
+* Mejorar la obtención de información entre plataformas: Establecer una mejor comunicación con los datos obtenidos dentro de la plataforma Sigind
+* Obtención de permisos para la recolección de datos en sus respectivas plataformas
+Oportunidades:
+* Mejorar la experiencia del usuario: Diseñar una interfaz intuitiva y accesible que facilite la visualización de datos para la toma de decisiones. 
+* Evaluar la posibilidad de que la solución sea compatible con otros dispositivos: Garantizar que la plataforma desarrollada pueda ser utilizada en distintos dispositivos.
+* Mejorar la toma de decisiones gracias a la obtención de datos actualizados: Implementar un sistema que proporcione datos en tiempo casi real, reduciendo el tiempo de espera.
+2.4 Usuario final
+Ingenieros de elaboración (entre semana jefe de evaporación y fines de semana ingeniero de turno)
+2.5 ¿Existen datos inicialmente? Realizar una fuente de datos:
+Si existen, pero no se tiene fácil acceso, en caso de PCS7 (Proceso en planta) se tiene solo el histórico de los últimos 20 días de operación a partir de la fecha en que se realice la consulta. En el caso de Sigind (Software de reporte de laboratorio) si tiene un histórico disponible de  datos desde el 2018 a la fecha.
+Nombre de la fuente de datos
+	Descripción
+	Tipo de datos
+	Formato de los datos
+	Fecha de actualización
+	Ubicación
+	Frecuencia de muestreo
+	PCS7
+	Sistema operativo que soporta todos los proceso de la fábrica
+	Numéricos (flotantes)
+	Excel 
+CSV
+	21- febrero-2025
+	Servidores principales del centro de automatización
+	Actualmente solo se realiza a demanda.
+	Sigind
+	Sistema operativo que registra las variables de calidad de fabrica
+	Numéricos (flotantes)
+	Excel
+CSV
+	21-febrero 2025
+	Aplicación de consulta abierta a cada usuario de acuerdo a permiso de perfil 
+	Depende de la variable en nuestro caso cada 2 horas y se almacena como histórico en los servidores.
+	
+
+3. OKR (Objectives and Key Results)
+* Objetivo 1: Encontrar la forma de obtener los datos y poder al menos por hora saber la evolución de los datos del día operativo.
+Resultados clave: Reducir el tiempo de captura de datos a menos de 24 horas, mejorar la comunicación dentro de las plataformas
+* Objetivo 2: Diseñar una interfaz visual con la capacidad de enseñar la información obtenida de forma actualizada y accesible para los usuarios
+Resultados clave 1: Reducir tiempo de actualización, visualización de la información por medio de una interfaz gráfica pensada en el usuario
+Resultados clave 2: Obtener un 70% de satisfacción del usuario con la interfaz gráfica
+
+
+4. KPI's de medición
+* Tiempo promedio de captura de datos
+* Tiempo promedio de actualización de la interfaz gráfica
+* Cantidad de usuarios ingresados 
+* Tiempo promedio de consulta por usuario
+* Porcentaje de satisfacción del usuario
