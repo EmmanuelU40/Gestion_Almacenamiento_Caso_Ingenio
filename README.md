@@ -13,7 +13,7 @@ Antes de proceder con la ejecucion del proyecto, asegurate de cumplir con los si
 ## Instalacion y configuracion
 ###Clonar el repositorio
 ```bash
-    git clone https://github.com/juancho191327/customer-churn-etl.git](https://github.com/EmmanuelU40/Gestion_Almacenamiento_Caso_Ingenio.git
+    git clone https://github.com/EmmanuelU40/Gestion_Almacenamiento_Caso_Ingenio.git
     cd Ambiente_Gestion
 ```
 ### Configurar el entorno virtual con Venv
