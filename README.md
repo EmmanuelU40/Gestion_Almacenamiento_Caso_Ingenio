@@ -115,7 +115,17 @@ El primero es el indicador de Consumo de vapor por TCM y el segundo es La eficie
 
 ![image](https://github.com/user-attachments/assets/453d7b68-db84-4029-936a-385d02fdfacd)
 
-De acuerdo con esto hemos removido el 70% de la variables que nos entregaron en su momento esto debido a que para el objetivo inicial estas no aportan mucho valor; pero para incrementar el seguimiento y utilizar otros indicadores algo mas complejos serian de utilidad, esto podria servir para el calculo del coeficiente de trasferencia de calor y su relacion con la incrustacion de los evaporadores; tambien nos dieron informacion que podria servir para montar un modelo de estimacion de perdidas de sacarosa pero en ambos casos es indispensable tener mas informacion y exterder el alcance de este proyecto, el cual no apunto a estos indicadores inicialmente.
+De acuerdo con esto hemos removido el 70% de la variables que nos entregaron en su momento esto debido a que para el objetivo inicial estas no aportan mucho valor; pero para incrementar el seguimiento y utilizar otros indicadores algo más complejos serian de utilidad, esto podría servir para el cálculo del coeficiente de trasferencia de calor y su relación con la incrustación de los evaporadores; también nos dieron información que podría servir para montar un modelo de estimación de pérdidas de sacarosa, pero en ambos casos es indispensable tener más información y extender el alcance de este proyecto, el cual no apunto a estos indicadores inicialmente.
+
+Después de esta consideración de las variables importantes comenzamos a analizar los archivos con miras en las variables fijadas antes y así decidimos como plantear los modelos dimensionales y la tabla de Hechos.
+![image](https://github.com/user-attachments/assets/6f4dccf0-ec61-4dab-9c25-5ed24776b3c0)
+
+A partir de este esquema y el preanálisis se hizo un esquema de que se debía tener en cuenta en cada etapa para así crear los diferente Pipelines para llegar  a las tablas de dimensiones y Hechos.
+
+![image](https://github.com/user-attachments/assets/866da6cb-61a4-49a1-9b58-c8330f306869)
+
+#Consideraciones del Staging
+
 
 
 
