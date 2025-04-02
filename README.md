@@ -100,7 +100,7 @@ A continuación, se describe el archivo data(fecha) turno (T1 o T2 o T3):
 
 •	Brix mel (Date/float): Esta variable representa la concentración de salida del tren de evaporación y se expresa en °Bx; la frecuencia de medida de este dato esta alrededor de cada 2 segundos, estos datos están en una escale de 0 a 70 y normalmente este alrededor de 60-68 °Bx.
 
-#Planificacion de Creacion de tablas y etapas de Staging
+###Planificacion de Creacion de tablas y etapas de Staging
 
 • Para esta etapa primero nos enfoquemos en la informacion util: se hace una filtracion de la informacion que verdaderamente necesitamos para calcular los dos indicadores:
 
