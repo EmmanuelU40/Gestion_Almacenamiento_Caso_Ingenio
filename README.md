@@ -88,35 +88,20 @@ A continuación, se describe el archivo data(fecha) turno (T1 o T2 o T3):
 
 #Planificacion de Creacion de tablas y etapas de Staging
 
-• Para esta etapa primero nos enfoquemos en la informacion util: se hace una filtracion de la informacion que verdaderamente necesitamos para calcular los dos indicadores
+• Para esta etapa primero nos enfoquemos en la informacion util: se hace una filtracion de la informacion que verdaderamente necesitamos para calcular los dos indicadores:
+
 ![image](https://github.com/user-attachments/assets/c8d610f9-c037-4c1e-b74d-bde8d0f35e06)
+
 ![image](https://github.com/user-attachments/assets/b92fb2e5-b31f-4e58-bcec-1407b5c30cf4)
+
 El primero es el indicador de Consumo de vapor por TCM y el segundo es La eficiencia del proceso de evaporación; teniendo en cuanta esta informacion se decidio con el modelo de cada archivo hacer las siguientes filtraciones:
 
-Variables PCS7			
-Item	Tipo de dato	Uso	Indicador
-Flujo cond Klb/hr Time	Date	Si	1
-Flujo cond Klb/hr ValueY	Float	Si	1
-Flujo cana Ton Time	Date	Si	1
-Flujo cana Ton ValueY	Float	Si	1
-Jcla C1 m3/hr Time	Date	No	NaN
-Jcla C1 m3/hr ValueY	Date	No	NaN
-Jcla C2 m3/hr Time	Date	No	NaN
-Jcla C2 m3/hr ValueY	Float	No	NaN
-Jcla C3 m3/hr Time	Date	No	NaN
-Jcla C3 m3/hr ValueY	Float	No	NaN
-Jcla C4 m3/hr Time	Date	No	NaN
-Jcla C4 m3/hr ValueY	Date	No	NaN
-Cond C1 m3/hr Time	Date	No	NaN
-Cond C1 m3/hr ValueY	Float	No	NaN
-Cond C2 m3/hr Time	Date	No	NaN
-Cond C2 m3/hr ValueY	Float	No	NaN
-Cond C3 m3/hr Time	Date	No	NaN
-Cond C3 m3/hr ValueY	Date	No	NaN
-Cond C4 m3/hr Time	Date	No	NaN
-Cond C4 m3/hr ValueY	Float	No	NaN
-Brix mel Time	Date	Si	2
-Brix mel ValueY	Float	Si	2
 ![image](https://github.com/user-attachments/assets/3ac3358f-d79b-444e-98f6-60a721c5aa5b)
+
+
+![image](https://github.com/user-attachments/assets/453d7b68-db84-4029-936a-385d02fdfacd)
+
+De acuerdo con esto hemos removido el 70% de la variables que nos entregaron en su momento esto debido a que para el objetivo inicial estas no aportan mucho valor; pero para incrementar el seguimiento y utilizar otros indicadores algo mas complejos serian de utilidad, esto podria servir para el calculo del coeficiente de trasferencia de calor y su relacion con la incrustacion de los evaporadores; tambien nos dieron informacion que podria servir para montar un modelo de estimacion de perdidas de sacarosa pero en ambos casos es indispensable tener mas informacion y exterder el alcance de este proyecto, el cual no apunto a estos indicadores inicialmente.
+
 
 
