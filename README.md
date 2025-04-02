@@ -11,7 +11,7 @@ Antes de proceder con la ejecucion del proyecto, asegurate de cumplir con los si
 -JupyterLab
 
 ## Instalacion y configuracion
-###Clonar el repositorio
+### Clonar el repositorio
 ```bash
     git clone https://github.com/EmmanuelU40/Gestion_Almacenamiento_Caso_Ingenio.git
     cd Ambiente_Gestion
@@ -31,10 +31,24 @@ Antes de proceder con la ejecucion del proyecto, asegurate de cumplir con los si
     db_port = 3306 
     db_name = db_config["name"]
 ```
+### Asegurate de instalar las librerias necesarias
+```bash
+    pip install pyaml sqalchemy urllib
+    pip install mysql-connector-python
+```
+
+## Recuerda que es muy importante tener MySQL instalado para el correcto funcionamiento del programa
+
 ### Para ejecutar el pipeline, simplemente ejecute el jupyter y proceda a correr el codigo
 ```bash
     jupyter lab --no-browser
 ```
+### ¿Cómo funciona?
+- Extrae los datos obtenidos por el PCS7 en la carpeta Data_Holdes, el formato es importante asi que asegurate que sea un CSV. y la configuracion de los datos sea la apropiada
+- Extrae los datos obtenidos por el SIGIND y subelos a la carpeta data_sigind
+
+## Ya con toda la informacion en su lugar solo dale al play y toda la informacion se cargará
+
 #### Caracterizacion de los datos Previo a extraccion
 
 Para nuestro caso en especifico la empresa no nos dejo acceder directamente a la información, pero nos van a compartir archivos compilatorios cada 8 horas; la información se esta almacenando en un One drive.
